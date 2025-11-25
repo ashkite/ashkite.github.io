@@ -4,34 +4,34 @@ import { Github, ExternalLink, Folder } from 'lucide-react';
 const Projects: React.FC = () => {
   const featuredProjects = [
     {
-      title: 'Featured Project 1',
-      description: 'A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.',
-      tech: ['VS Code', 'Sublime Text', 'Atom', 'iTerm2', 'Hyper'],
-      github: '#',
+      title: 'Daily Friend (일상친구)',
+      description: 'Spring Boot와 React(TypeScript)를 활용한 풀스택 웹 애플리케이션입니다. 사용자의 일상을 공유하고 소통하는 커뮤니티 플랫폼을 구축했습니다.',
+      tech: ['Java', 'Spring Boot', 'TypeScript', 'React', 'MySQL'],
+      github: 'https://github.com/Park-Jaeyeon/dailyfriend',
       external: '#'
     },
     {
-      title: 'Featured Project 2',
-      description: 'A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information of each track.',
-      tech: ['React', 'Styled Components', 'Spotify API'],
-      github: '#',
+      title: 'Podo-News',
+      description: 'Java를 기반으로 한 뉴스 데이터 처리 및 관리 프로젝트입니다. 팀 프로젝트로 진행되었으며, 백엔드 로직 구현을 담당했습니다.',
+      tech: ['Java', 'Spring Boot', 'JPA'],
+      github: 'https://github.com/Park-Jaeyeon/Podo-News',
       external: '#'
     }
   ];
 
   const otherProjects = [
      {
-      title: 'Project One',
-      description: 'Building a custom multisite compatible WordPress plugin to build global search with Algolia.',
-      tech: ['Algolia', 'WordPress', 'PHP'],
-      github: '#',
-      external: '#'
+      title: 'Portfolio Website',
+      description: '현재 보고 계신 포트폴리오 웹사이트입니다. React와 Tailwind CSS v4를 사용하여 반응형 디자인과 다크 모드를 구현했습니다.',
+      tech: ['React', 'TypeScript', 'Tailwind CSS', 'Vite'],
+      github: 'https://github.com/Park-Jaeyeon/Park-Jaeyeon.github.io',
+      external: 'https://park-jaeyeon.github.io/'
     },
      {
-      title: 'Project Two',
-      description: 'A comprehensive guide to the best coding bootcamps with a focus on web development.',
-      tech: ['React', 'Contentful'],
-      github: '#',
+      title: 'Python Practice',
+      description: '알고리즘 문제 해결 및 Python 문법 학습을 위한 개인 연습 저장소입니다.',
+      tech: ['Python'],
+      github: 'https://github.com/Park-Jaeyeon/python_practice',
       external: '#'
     },
      {
