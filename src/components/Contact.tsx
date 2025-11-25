@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Linkedin, Mail, Instagram, Twitter } from 'lucide-react';
+import { Github, Linkedin, Instagram, Twitter } from 'lucide-react';
 
 const Contact: React.FC = () => {
   return (
