@@ -52,12 +52,12 @@ const Projects: React.FC = () => {
           <div key={index} className={`relative grid grid-cols-12 gap-4 items-center ${index % 2 !== 0 ? 'text-left' : 'text-right'}`}>
             {/* Project Image */}
             <div className={`col-span-12 md:col-span-7 relative h-64 md:h-96 ${index % 2 !== 0 ? 'md:col-start-6' : 'md:col-start-1'}`}>
-               <div className="w-full h-full rounded shadow-xl overflow-hidden relative group cursor-pointer border border-lightest-navy">
-                   <div className="absolute inset-0 bg-navy/30 group-hover:bg-transparent transition-colors z-10"></div>
+               <div className="w-full h-full rounded shadow-xl overflow-hidden relative group cursor-pointer border border-lightest-navy bg-light-navy">
+                   <div className="absolute inset-0 bg-navy/10 group-hover:bg-transparent transition-colors z-10"></div>
                    <img 
                     src={project.image} 
                     alt={project.title} 
-                    className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-300"
+                    className="w-full h-full object-contain p-2 transition-all duration-300"
                    />
                </div>
             </div>
