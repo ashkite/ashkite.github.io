@@ -23,7 +23,7 @@ const Header: React.FC = () => {
   return (
     <header 
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-navy/90 backdrop-blur-sm shadow-lg h-20' : 'bg-transparent h-24'
+        scrolled ? 'bg-navy/90 backdrop-blur-md shadow-lg border-b border-lightest-navy h-20' : 'bg-transparent h-24'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-10 h-full flex justify-between items-center">
