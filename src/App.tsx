@@ -1,3 +1,4 @@
+import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -7,14 +8,16 @@ import Contact from './components/Contact';
 
 function App() {
   return (
-    <div className="min-h-screen bg-white text-gray-900 font-sans selection:bg-blue-100 selection:text-blue-900">
+    <div className="bg-navy min-h-screen text-slate selection:bg-green selection:text-navy">
       <Header />
-      <main>
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
+      <main className="flex flex-col items-center w-full px-4 md:px-24 xl:px-32">
+        <div className="w-full max-w-[1600px]">
+            <Hero />
+            <About />
+            <Skills />
+            <Projects />
+            <Contact />
+        </div>
       </main>
     </div>
   );

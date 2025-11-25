@@ -1,71 +1,112 @@
 import React from 'react';
-import { Github, ExternalLink } from 'lucide-react';
+import { Github, ExternalLink, Folder } from 'lucide-react';
 
 const Projects: React.FC = () => {
-  const projects = [
+  const featuredProjects = [
     {
+      title: 'Featured Project 1',
+      description: 'A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.',
+      tech: ['VS Code', 'Sublime Text', 'Atom', 'iTerm2', 'Hyper'],
+      github: '#',
+      external: '#'
+    },
+    {
+      title: 'Featured Project 2',
+      description: 'A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information of each track.',
+      tech: ['React', 'Styled Components', 'Express', 'Spotify API'],
+      github: '#',
+      external: '#'
+    }
+  ];
+
+  const otherProjects = [
+     {
       title: 'Project One',
-      description: 'A web application built with React and TypeScript that allows users to track their daily tasks and productivity.',
-      tech: ['React', 'TypeScript', 'Tailwind'],
+      description: 'Building a custom multisite compatible WordPress plugin to build global search with Algolia.',
+      tech: ['Algolia', 'WordPress', 'PHP'],
       github: '#',
       external: '#'
     },
-    {
+     {
       title: 'Project Two',
-      description: 'An e-commerce platform featuring a shopping cart, user authentication, and payment processing integration.',
-      tech: ['Next.js', 'Stripe', 'Firebase'],
+      description: 'A comprehensive guide to the best coding bootcamps with a focus on web development.',
+      tech: ['Next.js', 'Contentful'],
       github: '#',
       external: '#'
     },
-    {
+     {
       title: 'Project Three',
-      description: 'A real-time weather dashboard that provides forecasts and historical weather data using a third-party API.',
-      tech: ['Vue.js', 'Chart.js', 'WeatherAPI'],
+      description: 'Designed and developed the website for a student-led design studio.',
+      tech: ['Gatsby', 'Netlify'],
       github: '#',
       external: '#'
     },
-    // Add more projects as needed
   ];
 
   return (
-    <section id="projects" className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-gray-900 mb-12">Featured Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <div key={index} className="bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow duration-300 p-6 flex flex-col h-full border border-gray-100">
-              <div className="flex justify-between items-start mb-4">
-                <div className="folder-icon text-blue-600">
-                   {/* You can add a folder icon here if you want */}
-                   <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
-                    </svg>
-                </div>
-                <div className="flex space-x-4">
-                  <a href={project.github} className="text-gray-500 hover:text-gray-900 transition-colors">
-                    <Github size={20} />
-                  </a>
-                  <a href={project.external} className="text-gray-500 hover:text-blue-600 transition-colors">
-                    <ExternalLink size={20} />
-                  </a>
-                </div>
-              </div>
-              
-              <h3 className="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
-              <p className="text-gray-600 mb-4 flex-grow text-sm leading-relaxed">
+    <section id="projects" className="py-24 max-w-5xl mx-auto px-6 sm:px-10">
+      <div className="flex items-center mb-12 animate-fade-in-up">
+        <span className="text-green font-mono text-xl mr-2">03.</span>
+        <h2 className="text-3xl font-bold text-lightest-slate whitespace-nowrap">Some Things I've Built</h2>
+        <div className="h-[1px] w-full bg-lightest-navy ml-6"></div>
+      </div>
+
+      {/* Featured Projects - Alternating Layout */}
+      <div className="space-y-24 mb-24">
+        {featuredProjects.map((project, index) => (
+          <div key={index} className={`relative grid grid-cols-12 gap-4 items-center ${index % 2 !== 0 ? 'text-left' : 'text-right'}`}>
+            {/* Project Image */}
+            <div className={`col-span-12 md:col-span-7 relative h-80 md:h-full ${index % 2 !== 0 ? 'md:col-start-6' : 'md:col-start-1'}`}>
+               <div className="w-full h-full bg-green/20 rounded overflow-hidden relative group cursor-pointer border border-lightest-navy">
+                   <div className="absolute inset-0 bg-navy/30 group-hover:bg-transparent transition-colors"></div>
+                   <div className="w-full h-full flex items-center justify-center text-green/50 text-6xl font-mono bg-light-navy">IMG</div>
+               </div>
+            </div>
+
+            {/* Project Content */}
+            <div className={`col-span-12 md:col-span-7 z-10 pointer-events-none md:pointer-events-auto ${index % 2 !== 0 ? 'md:col-start-1 md:row-start-1' : 'md:col-start-6 md:row-start-1 text-right'}`}>
+              <p className="font-mono text-green text-sm mb-2">Featured Project</p>
+              <h3 className="text-2xl font-bold text-lightest-slate mb-6 hover:text-green cursor-pointer transition-colors inline-block">
+                <a href={project.external}>{project.title}</a>
+              </h3>
+              <div className="bg-light-navy text-slate p-6 rounded shadow-xl text-sm leading-relaxed mb-6 z-20 relative">
                 {project.description}
-              </p>
-              
-              <div className="flex flex-wrap gap-2 mt-auto pt-4">
-                {project.tech.map((t) => (
-                  <span key={t} className="text-xs font-mono text-gray-500">
-                    {t}
-                  </span>
-                ))}
+              </div>
+              <ul className={`flex flex-wrap gap-4 text-slate font-mono text-xs mb-8 ${index % 2 !== 0 ? 'justify-start' : 'justify-end'}`}>
+                {project.tech.map(t => <li key={t}>{t}</li>)}
+              </ul>
+              <div className={`flex items-center gap-4 ${index % 2 !== 0 ? 'justify-start' : 'justify-end'}`}>
+                <a href={project.github} className="text-slate hover:text-green transition-colors"><Github size={20} /></a>
+                <a href={project.external} className="text-slate hover:text-green transition-colors"><ExternalLink size={20} /></a>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Other Projects - Grid */}
+      <div className="text-center mb-10">
+        <h3 className="text-2xl font-bold text-lightest-slate mb-2">Other Noteworthy Projects</h3>
+        <a href="#" className="font-mono text-green text-sm hover:underline">view the archive</a>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {otherProjects.map((project, index) => (
+            <div key={index} className="bg-light-navy p-8 rounded shadow-lg hover:-translate-y-2 transition-transform duration-300 flex flex-col h-full group">
+                <div className="flex justify-between items-center mb-8">
+                    <Folder size={40} className="text-green" />
+                    <div className="flex space-x-4">
+                         <a href={project.github} className="text-slate hover:text-green transition-colors"><Github size={20} /></a>
+                         <a href={project.external} className="text-slate hover:text-green transition-colors"><ExternalLink size={20} /></a>
+                    </div>
+                </div>
+                <h3 className="text-xl font-bold text-lightest-slate mb-2 group-hover:text-green transition-colors">{project.title}</h3>
+                <p className="text-slate text-sm flex-grow mb-6">{project.description}</p>
+                <ul className="flex flex-wrap gap-2 text-slate font-mono text-xs mt-auto">
+                    {project.tech.map(t => <li key={t}>{t}</li>)}
+                </ul>
+            </div>
+        ))}
       </div>
     </section>
   );
