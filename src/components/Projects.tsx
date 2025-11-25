@@ -36,13 +36,6 @@ const Projects: React.FC = () => {
       github: '#',
       external: '#'
     },
-     {
-      title: 'Vibe Coding (바이브코딩)',
-      description: '음악과 코딩을 결합한 창의적인 프로젝트입니다. 리듬에 맞춰 코드를 작성하거나 코드 흐름을 음악으로 시각화합니다.',
-      tech: ['Web Audio API', 'React', 'Canvas'],
-      github: '#',
-      external: '#'
-    },
   ];
 
   return (
