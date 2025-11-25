@@ -13,7 +13,7 @@ const Projects: React.FC = () => {
     {
       title: 'Featured Project 2',
       description: 'A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information of each track.',
-      tech: ['React', 'Styled Components', 'Express', 'Spotify API'],
+      tech: ['React', 'Styled Components', 'Spotify API'],
       github: '#',
       external: '#'
     }
@@ -30,7 +30,7 @@ const Projects: React.FC = () => {
      {
       title: 'Project Two',
       description: 'A comprehensive guide to the best coding bootcamps with a focus on web development.',
-      tech: ['Next.js', 'Contentful'],
+      tech: ['React', 'Contentful'],
       github: '#',
       external: '#'
     },

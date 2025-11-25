@@ -8,19 +8,19 @@ const Skills: React.FC = () => {
     },
     {
       title: 'Frontend',
-      skills: ['React', 'Next.js', 'Vue.js', 'Tailwind CSS', 'Redux', 'Zustand']
+      skills: ['React', 'Vue.js', 'Tailwind CSS', 'Redux', 'Zustand']
     },
     {
       title: 'Backend',
-      skills: ['Node.js', 'Express', 'NestJS', 'Django', 'Spring Boot']
+      skills: ['Spring Boot', 'Django']
     },
     {
       title: 'Database',
-      skills: ['MySQL', 'PostgreSQL', 'MongoDB', 'Redis']
+      skills: ['MySQL', 'MongoDB', 'Redis']
     },
     {
       title: 'Tools & DevOps',
-      skills: ['Git', 'Docker', 'AWS', 'Figma', 'Jira']
+      skills: ['Git', 'Docker', 'Figma', 'Jira']
     }
   ];
 

@@ -23,7 +23,7 @@ const About: React.FC = () => {
             최근에 사용하고 있는 기술들은 다음과 같습니다:
           </p>
           <ul className="grid grid-cols-2 gap-2 mt-4 font-mono text-sm">
-            {['JavaScript (ES6+)', 'TypeScript', 'React', 'Vue', 'Node.js', 'WordPress'].map((skill) => (
+            {['JavaScript (ES6+)', 'TypeScript', 'React', 'Vue', 'Java', 'Spring Boot'].map((skill) => (
               <li key={skill} className="flex items-center before:content-['▹'] before:text-green before:mr-2">
                 {skill}
               </li>
