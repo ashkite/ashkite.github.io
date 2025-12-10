@@ -7,7 +7,7 @@ const featuredProjects = [
     description:
       '금융 데이터를 시각화하고 분석하여 사용자에게 인사이트를 제공하는 핀테크 서비스입니다. 복잡한 금융 정보를 직관적인 차트와 리포트로 제공합니다.',
     tech: ['React', 'TypeScript', 'Chart.js', 'Spring Boot'],
-    github: 'https://github.com/ashkite',
+    github: 'https://github.com/ashkite/Finble',
     external: '#',
     image: '/image/finble.png',
   },
@@ -16,7 +16,7 @@ const featuredProjects = [
     description:
       '약품 정보를 쉽게 검색하고 관리할 수 있는 헬스케어 플랫폼입니다. 사용자 복용 약을 등록하고 알림을 받으며, 상호작용 정보도 함께 제공합니다.',
     tech: ['Java', 'Spring Boot', 'JPA', 'MySQL'],
-    github: 'https://github.com/Park-Jaeyeon/Podo-News',
+    github: 'https://github.com/ashkite/Podo-News',
     external: '#',
     image: '/image/pill_pack.png',
   },
@@ -28,14 +28,14 @@ const otherProjects = [
     description:
       '일기장, 가계부, 일정관리, 중요 정보 메모 등 일상생활에 필요한 다양한 기능을 제공하는 서비스입니다.',
     tech: ['Spring Boot', 'React', 'MySQL'],
-    github: 'https://github.com/Park-Jaeyeon/dailyfriend',
+    github: 'https://github.com/ashkite/dailyfriend',
     external: '#',
   },
   {
     title: 'Chatbot Service',
     description: 'LLM을 활용한 지능형 상담 챗봇 서비스입니다.',
     tech: ['Python', 'LangChain', 'OpenAI API'],
-    github: 'https://github.com/ashkite',
+    github: 'https://github.com/ashkite/Chatbot-Service',
     external: '#',
   },
 ];
@@ -63,7 +63,7 @@ const Projects: React.FC = () => {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-contain p-4" 
+                  className="w-full h-full object-contain p-4"
                 />
               </div>
             </div>
